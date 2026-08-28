@@ -43,3 +43,6 @@ export default function Board() {
     </>
   );
 }
+function calculateWinner(){
+  
+}
