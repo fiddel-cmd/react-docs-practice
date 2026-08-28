@@ -57,6 +57,14 @@ export default function Board() {
     </>
   );
 }
+export function Game(){
+  return(
+    <>
+    
+    </>
+
+  );
+}
 
 // Function to calculate the winner
 function calculateWinner(squares) {
