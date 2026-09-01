@@ -11,7 +11,7 @@ export default function Board() {
     if (squares[i]) {
       return;
     }
-    if(squares[i] || calculateWinner(squares)){
+    if (squares[i] || calculateWinner(squares)) {
       return;
     }
     const nextSquares = squares.slice();
@@ -29,16 +29,16 @@ export default function Board() {
   // get the winner and store the result to the variable winner
   const winner = calculateWinner(squares);
   let status;
-  if(winner){
-    status ="Winner " + winner;
+  if (winner) {
+    status = "Winner " + winner;
   }
-  else{
-    "Next winner" +(xIsnext ? "X" : "O");
+  else {
+    "Next winner" + (xIsnext ? "X" : "O");
   }
-  
+
   return (
     <>
-    <div className = "status">{status}</div>
+      <div className="status">{status}</div>
       <div className="board-row">
         <Square value={squares[0]} onSquareClick={() => handleClick(0)} />
         <Square value={squares[1]} onSquareClick={() => handleClick(1)} />
@@ -54,13 +54,21 @@ export default function Board() {
         <Square value={squares[7]} onSquareClick={() => handleClick(7)} />
         <Square value={squares[8]} onSquareClick={() => handleClick(8)} />
       </div>
+      
     </>
   );
 }
-export function Game(){
-  return(
+// time travel function
+export function Game() {
+  return (
     <>
-    
+      <div className="game"></div>
+      <div className="game-board">
+        <Board />
+      </div>
+      <div className="game-info">
+        <ol>{ }</ol>
+      </div>
     </>
 
   );
@@ -87,3 +95,5 @@ function calculateWinner(squares) {
   return null;
 
 }
+
+
