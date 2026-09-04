@@ -5,8 +5,8 @@ function Square({ value, onSquareClick }) {
 }
 // Board function
 export default function Board({ xIsnext, squares, onPlay }) {
-  const [xIsnext, setXIsNext] = useState(true);
-  const [squares, setSquares] = useState(Array(9).fill(null));
+  // const [xIsnext, setXIsNext] = useState(true);
+  // const [squares, setSquares] = useState(Array(9).fill(null));
   function handleClick(i) {
     if (squares[i]) {
       return;
@@ -23,8 +23,11 @@ export default function Board({ xIsnext, squares, onPlay }) {
     }
 
 
-    setSquares(nextSquares);
-    setXIsNext(!xIsnext);
+    // setSquares(nextSquares);
+    // setXIsNext(!xIsnext);
+    
+    
+    onPlay(nextSquares);
   }
   // get the winner and store the result to the variable winner
   const winner = calculateWinner(squares);
@@ -66,6 +69,8 @@ export function Game() {
 
   //called by the Board function to update the sqaure when a player make a move.
   function handlePlay(nextSquares) {
+    sethistory([...history , setXIsNext]);
+    setXIsNext(!xIsnext);
 
   }
   return (
