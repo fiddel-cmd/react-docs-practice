@@ -1,10 +1,10 @@
-import { useState } from 'react';
+import { use, useState } from 'react';
 
 function Square({ value, onSquareClick }) {
   return <button className="square" onClick={onSquareClick}>{value}</button>;
 }
 // Board function
-export default function Board() {
+export default function Board({ xIsnext, squares, onPlay }) {
   const [xIsnext, setXIsNext] = useState(true);
   const [squares, setSquares] = useState(Array(9).fill(null));
   function handleClick(i) {
@@ -54,17 +54,25 @@ export default function Board() {
         <Square value={squares[7]} onSquareClick={() => handleClick(7)} />
         <Square value={squares[8]} onSquareClick={() => handleClick(8)} />
       </div>
-      
+
     </>
   );
 }
 // time travel function
 export function Game() {
+  const [xIsnext, setXIsNext] = useState(true);
+  const [history, sethistory] = useState([Array(9).fill(null)])
+  const currentSquares = history[history.length - 1];
+
+  //called by the Board function to update the sqaure when a player make a move.
+  function handlePlay(nextSquares) {
+
+  }
   return (
     <>
       <div className="game"></div>
       <div className="game-board">
-        <Board />
+        <Board xIsnext={xIsnext} squares={currentSquares} onPlay={handlePlay} />
       </div>
       <div className="game-info">
         <ol>{ }</ol>
