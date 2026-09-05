@@ -86,6 +86,10 @@ body {
   flex-direction: row;
   justify-content: center;
   gap: 50px;
+  align-items: center;
+  padding: 50px;
+  min-height: 100vh;
+
 }
 
 .game-info {
