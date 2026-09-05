@@ -3,9 +3,10 @@
 }
 
 body {
-  font-family: sans-serif;
+  font-family:Arial, Helvetica, sans-serif;
   margin: 20px;
   padding: 0;
+  color:#1f2937 ;
 }
 
 h1 {
@@ -83,13 +84,11 @@ body {
 .game {
   display: flex;
   flex-direction: row;
+  justify-content: center;
+  gap: 50px;
 }
 
 .game-info {
   margin-left: 20px;
 }
-.name{
-  font-size: large;
-  color: aqua;
-  margin-top: 10px;
-}
+
