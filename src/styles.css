@@ -116,3 +116,6 @@ sqaure:hover{
   align-items: center;
 
 }
+.square:active{
+  transform: scale(0.95);
+}
