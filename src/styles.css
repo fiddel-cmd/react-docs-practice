@@ -144,3 +144,19 @@ sqaure:hover{
 .square:active{
   transform: scale(0.95);
 }
+@media (max-width : 700px){
+  .game{
+    flex-direction: column;
+    gap : 30px;
+    padding: 20px;
+
+  }
+  .square{
+    width: 75px;
+    height: 75px;
+    font-size: 30px;
+  }
+  .game-info{
+    width: 250px;
+  }
+}
