@@ -108,8 +108,33 @@ sqaure:hover{
 
 .game-info {
   margin-left: 20px;
+  width: 220px;
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 40x 15px rgb(0,0,0,0.08);
+}
+.game-info ol {
+  margin: 0;
+  padding-left: 25px;
 }
 
+.game-info button{
+  width: 100%;
+  padding: 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background 0.2s ease;
+  background: #f3f4f6;
+  margin-bottom: 8px;
+  
+  
+}
+.game-info button:hover{
+  background: #e5e7eb;
+
+}
 .game-board {
   display: flex;
   flex-direction: column;
